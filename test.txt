@@ -1,0 +1,29 @@
+class FileRead{			//reading file from system
+
+	public static void main(String[] args){
+
+	FileInputStream os=null;
+	BufferedReader br= null;
+	
+	try{
+		os= new FileInputStream(Path);
+		br= new BufferedReader(new InputStreamReader(os));
+
+		String str;
+		while((str=br.readLine() != null){
+
+				sysout(str);
+		}
+	}catch (IO Exception e){
+		e.printStackTrace();
+	} finally {
+		try{
+
+			br.close();
+			os.close();
+		}catch(IOException e){
+		e.printStackTrace();
+		}
+	}
+	}
+}
